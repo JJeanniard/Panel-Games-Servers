@@ -11,8 +11,8 @@ Encore
   .setOutputPath("public/build/")
 
   .copyFiles({
-    from: "./assets/img"
-
+    from: "./assets/img",
+    to: "images/[path][name].[ext]"
     // optional target path, relative to the output dir
     //to: 'images/[path][name].[ext]',
 
@@ -23,6 +23,7 @@ Encore
     //pattern: /\.(png|jpg|jpeg)$/
   })
 
+  
   // public path used by the web server to access the output path
   .setPublicPath("/build")
   // only needed for CDN's or sub-directory deploy
