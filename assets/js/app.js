@@ -10,9 +10,9 @@ import '../css/app.scss';
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 import $ from 'jquery';
 //var $ = require('jquery');
+global.$ = global.jQuery = $;
 import greet from './greet';
 //var greet = require('./greet');
 
 require('bootstrap');
 require('admin-lte');
-

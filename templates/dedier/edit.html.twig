@@ -1,9 +1,8 @@
-{% extends 'base.html.twig' %}
+{% extends 'box.html.twig' %}
 
-{% block title %}Edit Dedier{% endblock %}
-
-{% block body %}
-    <h1>Edit Dedier</h1>
+{% block title %}{{parent()}} - Edit Dedier{% endblock %}
+{% block titre %}Edit Dedier{% endblock %}
+{% block box %}
 
     {{ include('dedier/_form.html.twig', {'button_label': 'Update'}) }}
 

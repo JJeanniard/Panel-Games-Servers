@@ -1,43 +1,45 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Dedier index{% endblock %}
-
-{% block body %}
-    <h1>Dedier index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Username</th>
-                <th>Password</th>
-                <th>System</th>
-                <th>Path</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for dedier in dediers %}
-            <tr>
-                <td>{{ dedier.id }}</td>
-                <td>{{ dedier.name }}</td>
-                <td>{{ dedier.username }}</td>
-                <td>{{ dedier.password }}</td>
-                <td>{{ dedier.system }}</td>
-                <td>{{ dedier.path }}</td>
-                <td>
-                    <a href="{{ path('dedier_show', {'id': dedier.id}) }}">show</a>
-                    <a href="{{ path('dedier_edit', {'id': dedier.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="7">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('dedier_new') }}">Create new</a>
+{% extends 'dedier/box.html.twig' %}
+{% block title %}{{parent()}} - Box{% endblock %}
+{% block titre %}Box{% endblock %}
+{% block box %}
+<div class="card">
+    <div class="card-header">
+        <a class="float-right" href="{{ path('dedier_new') }}">Create new</a>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Ip</th>
+                    <th>Port</th>
+                    <th>System</th>
+                    <th>Path</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for dedier in dediers %}
+                <tr>
+                    <td>{{ dedier.id }}</td>
+                    <td>{{ dedier.name }}</td>
+                    <td>{{ dedier.ip }}</td>
+                    <td>{{ dedier.port }}</td>
+                    <td>{{ dedier.system }}</td>
+                    <td>{{ dedier.path }}</td>
+                    <td>
+                        <a href="{{ path('dedier_show', {'id': dedier.id}) }}">show</a>
+                        <a href="{{ path('dedier_edit', {'id': dedier.id}) }}">edit</a>
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="7">no records found</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endblock %}

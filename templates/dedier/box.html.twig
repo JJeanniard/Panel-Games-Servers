@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="col-md-6">
+    {% block box %}{% endblock %}
+</div>
+{% endblock %}
+{% block javascript %}
+{{parent()}}
+<script>
+    $('#box').addClass('active');
+</script>
+{% endblock %}
