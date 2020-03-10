@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -50,6 +52,16 @@ class Dedier
      * @ORM\Column(type="string", length=255)
      */
     private $port;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\DedierIP", mappedBy="dedier")
+     */
+    private $dedierIPs;
+
+    public function __construct()
+    {
+        $this->dedierIPs = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -136,6 +148,37 @@ class Dedier
     public function setPort(string $port): self
     {
         $this->port = $port;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|DedierIP[]
+     */
+    public function getDedierIPs(): Collection
+    {
+        return $this->dedierIPs;
+    }
+
+    public function addDedierIP(DedierIP $dedierIP): self
+    {
+        if (!$this->dedierIPs->contains($dedierIP)) {
+            $this->dedierIPs[] = $dedierIP;
+            $dedierIP->setDedier($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDedierIP(DedierIP $dedierIP): self
+    {
+        if ($this->dedierIPs->contains($dedierIP)) {
+            $this->dedierIPs->removeElement($dedierIP);
+            // set the owning side to null (unless already changed)
+            if ($dedierIP->getDedier() === $this) {
+                $dedierIP->setDedier(null);
+            }
+        }
 
         return $this;
     }

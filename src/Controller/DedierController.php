@@ -20,8 +20,6 @@ class DedierController extends AbstractController
      */
     public function index(DedierRepository $dedierRepository): Response
     {
-
-        
         return $this->render('dedier/index.html.twig', [
             'dediers' => $dedierRepository->findAll(),
         ]);

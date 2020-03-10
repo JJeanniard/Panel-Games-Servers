@@ -1,12 +1,12 @@
-{% extends 'box.html.twig' %}
+{% extends 'dedier/box.html.twig' %}
 
 {% block title %}{{parent()}} - Edit Dedier{% endblock %}
 {% block titre %}Edit Dedier{% endblock %}
 {% block box %}
-
+<div class="card card-primary">
+    <div class="card-header">
+      <h3 class="card-title">Edit Dedier</h3>
+    </div>
     {{ include('dedier/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('dedier_index') }}">back to list</a>
-
-    {{ include('dedier/_delete_form.html.twig') }}
+</div>
 {% endblock %}

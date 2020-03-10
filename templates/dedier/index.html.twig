@@ -4,7 +4,7 @@
 {% block box %}
 <div class="card">
     <div class="card-header">
-        <a class="float-right" href="{{ path('dedier_new') }}">Create new</a>
+        <a class="float-right btn btn-info" href="{{ path('dedier_new') }}">Create new</a>
     </div>
     <div class="card-body">
         <table class="table">
@@ -17,6 +17,7 @@
                     <th>System</th>
                     <th>Path</th>
                     <th>actions</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -29,9 +30,15 @@
                     <td>{{ dedier.system }}</td>
                     <td>{{ dedier.path }}</td>
                     <td>
-                        <a href="{{ path('dedier_show', {'id': dedier.id}) }}">show</a>
-                        <a href="{{ path('dedier_edit', {'id': dedier.id}) }}">edit</a>
+                        <div class="btn-group">
+                            <a class="btn btn-info" href="{{ path('dedier_edit', {'id': dedier.id}) }}"><i
+                                    class="nav-icon fas fa-edit"></i></a>
+                            <a class="btn btn-secondary" href="{{ path('dedier_show', {'id': dedier.id}) }}"><i
+                                    class="nav-icon fas fa-search"></i></a>
+                        </div>
+                        
                     </td>
+                    <td>{{ include('dedier/_delete_form.html.twig') }}</td>
                 </tr>
                 {% else %}
                 <tr>

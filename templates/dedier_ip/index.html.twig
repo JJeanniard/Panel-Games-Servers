@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DedierIP index{% endblock %}
+
+{% block body %}
+    <h1>DedierIP index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Ip</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for dedier_i_p in dedier_i_ps %}
+            <tr>
+                <td>{{ dedier_i_p.id }}</td>
+                <td>{{ dedier_i_p.Ip }}</td>
+                <td>
+                    <a href="{{ path('dedier_i_p_show', {'id': dedier_i_p.id}) }}">show</a>
+                    <a href="{{ path('dedier_i_p_edit', {'id': dedier_i_p.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('dedier_i_p_new') }}">Create new</a>
+{% endblock %}
