@@ -15,9 +15,6 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class DedierIPController extends AbstractController
 {
-    /**
-     * @Route("/", name="dedier_i_p_index", methods={"GET"})
-     */
     public function index(DedierIPRepository $dedierIPRepository): Response
     {
         return $this->render('dedier_ip/index.html.twig', [

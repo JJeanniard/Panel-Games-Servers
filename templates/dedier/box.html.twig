@@ -2,7 +2,12 @@
 {% block body %}
 <div class="col-md-7">
     {% block box %}{% endblock %}
+
 </div>
+<div class="col-md-5">
+    {{render(controller('App\\Controller\\DedierIPController::index'))}}
+</div>
+
 {% endblock %}
 {% block javascript %}
 {{parent()}}
