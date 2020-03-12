@@ -36,7 +36,7 @@ class DedierIPController extends AbstractController
             $entityManager->persist($dedierIP);
             $entityManager->flush();
 
-            return $this->redirectToRoute('dedier_i_p_index');
+            return $this->redirectToRoute('dedier_index');
         }
 
         return $this->render('dedier_ip/new.html.twig', [
@@ -66,7 +66,7 @@ class DedierIPController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('dedier_i_p_index');
+            return $this->redirectToRoute('dedier_index');
         }
 
         return $this->render('dedier_ip/edit.html.twig', [
@@ -86,6 +86,6 @@ class DedierIPController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('dedier_i_p_index');
+        return $this->redirectToRoute('dedier_index');
     }
 }

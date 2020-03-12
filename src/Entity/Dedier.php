@@ -46,11 +46,6 @@ class Dedier
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $ip;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $port;
 
     /**
@@ -124,18 +119,6 @@ class Dedier
     public function setPath(string $path): self
     {
         $this->path = $path;
-
-        return $this;
-    }
-
-    public function getIp(): ?string
-    {
-        return $this->ip;
-    }
-
-    public function setIp(string $ip): self
-    {
-        $this->ip = $ip;
 
         return $this;
     }

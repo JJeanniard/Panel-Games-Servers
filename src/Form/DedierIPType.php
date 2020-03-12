@@ -13,7 +13,6 @@ class DedierIPType extends AbstractType
     {
         $builder
             ->add('Ip')
-            ->add('dedier')
         ;
     }
 
