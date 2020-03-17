@@ -1,52 +1,17 @@
-{% extends 'dedier/box.html.twig' %}
+{% extends 'base.html.twig' %}
 {% block title %}{{parent()}} - Box{% endblock %}
 {% block titre %}Box{% endblock %}
-{% block box %}
-<div class="card">
-    <div class="card-header">
-        <a class="float-right btn btn-info" href="{{ path('dedier_new') }}">Create new</a>
-    </div>
-    <div class="card-body">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Ip</th>
-                    <th>Port</th>
-                    <th>System</th>
-                    <th>Path</th>
-                    <th>actions</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for dedier in dediers %}
-                <tr>
-                    <td>{{ dedier.id }}</td>
-                    <td>{{ dedier.name }}</td>
-                    <td>{# dedier.DedierIps[dedier.id].Ip #}</td>
-                    <td>{{ dedier.port }}</td>
-                    <td>{{ dedier.system }}</td>
-                    <td>{{ dedier.path }}</td>
-                    <td>
-                        <div class="btn-group">
-                            <a class="btn btn-info" href="{{ path('dedier_edit', {'id': dedier.id}) }}"><i
-                                    class="nav-icon fas fa-edit"></i></a>
-                            <a class="btn btn-secondary" href="{{ path('dedier_show', {'id': dedier.id}) }}"><i
-                                    class="nav-icon fas fa-search"></i></a>
-                        </div>
-                        
-                    </td>
-                    <td>{{ include('dedier/_delete_form.html.twig') }}</td>
-                </tr>
-                {% else %}
-                <tr>
-                    <td colspan="7">no records found</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
+{% block body %}
+<div class="col-md-7">
+    {% include "dedier/box.html.twig" %}
 </div>
+<div class="col-md-5">
+    {{render(controller('App\\Controller\\DedierIPController::index'))}}
+</div>
+{% endblock %}
+{% block javascript %}
+{{parent()}}
+<script>
+    $('#box').addClass('active');
+</script>
 {% endblock %}

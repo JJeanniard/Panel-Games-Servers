@@ -17,7 +17,7 @@ class DedierIPController extends AbstractController
 {
     public function index(DedierIPRepository $dedierIPRepository): Response
     {
-        return $this->render('dedier_ip/index.html.twig', [
+        return $this->render('dedier/dedier_ip/index.html.twig', [
             'dedier_i_ps' => $dedierIPRepository->findAll(),
         ]);
     }
