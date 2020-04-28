@@ -20,6 +20,8 @@ class DedierType extends AbstractType
             ->add('DedierIPs', CollectionType::class, [
                 'entry_type' => DedierIPType::class,
                 'entry_options' => ['label' => false],
+                'allow_add' => true,
+                'by_reference' => false,
             ])
             ->add('port')
             ->add('username', TextType::class)
