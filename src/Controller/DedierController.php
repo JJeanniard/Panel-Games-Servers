@@ -17,6 +17,8 @@ class DedierController extends AbstractController
 {
     /**
      * @Route("/", name="dedier_index", methods={"GET"})
+     * @param DedierRepository $dedierRepository
+     * @return Response
      */
     public function index(DedierRepository $dedierRepository): Response
     {

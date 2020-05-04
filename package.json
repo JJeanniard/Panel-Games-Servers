@@ -1,12 +1,12 @@
 {
     "devDependencies": {
         "@symfony/webpack-encore": "^0.28.2",
-        "core-js": "^3.0.0",
-        "jquery": "^3.4.1",
+        "core-js": "^3.6.5",
+        "jquery": "^3.5.0",
         "less-loader": "4.1.0",
-        "node-sass": "^4.13.1",
+        "node-sass": "^4.14.0",
         "popper.js": "^1.16.1",
-        "regenerator-runtime": "^0.13.2",
+        "regenerator-runtime": "^0.13.5",
         "sass-loader": "7.0.1",
         "stylus": "^0.54.7",
         "stylus-loader": "3.0.2",
@@ -24,7 +24,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "admin-lte": "3.0",
+        "admin-lte": "^3.0.4",
         "bootstrap": "^4.4.1"
     }
 }
