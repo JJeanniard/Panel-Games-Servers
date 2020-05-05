@@ -3,12 +3,14 @@
 {% block titre %}Box{% endblock %}
 {% block body %}
 <div class="col-md-7">
+    {% if count(dediers) != 0 %}
     {% include "dedier/box.html.twig" %}
-</div>
-<div class="col-md-5">
-    {{render(controller('App\\Controller\\DedierIPController::index'))}}
+    {% else %}
+
+    {% endif %}
 </div>
 {% endblock %}
+
 {% block javascript %}
 {{parent()}}
 <script>
