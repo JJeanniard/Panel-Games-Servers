@@ -3,11 +3,7 @@
 {% block titre %}Box{% endblock %}
 {% block body %}
 <div class="col-md-7">
-    {% if dediers != null %}
     {% include "dedier/box.html.twig" %}
-    {% else %}
-    <!-- inclure le formulaire de creation du premier dedier -->
-    {% endif %}
 </div>
 {% endblock %}
 

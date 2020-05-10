@@ -22,6 +22,7 @@ class DedierController extends AbstractController
      */
     public function index(DedierRepository $dedierRepository): Response
     {
+        //TODO penser à mettre un message d'alert dans la partie serveur games, si il pas de dedier ou association avec Nitrado .....
         return $this->render('dedier/index.html.twig', [
             'dediers' => $dedierRepository->findAll(),
         ]);

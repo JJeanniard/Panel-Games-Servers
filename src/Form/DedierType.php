@@ -17,6 +17,7 @@ class DedierType extends AbstractType
     {
         $builder
             ->add('name', TextType::class)
+
             ->add('DedierIPs', CollectionType::class, [
                 'entry_type' => DedierIPType::class,
                 'entry_options' => ['label' => false],
