@@ -1,3 +1,5 @@
+{% extends 'dedier/index.html.twig' %}
+{% block body_box %}
 <div class="card">
     <div class="card-header">
         <a class="float-right btn btn-info" href="{{ path('dedier_new') }}"><i class="nav-icon fas fa-plus-circle"> Create new box </i></a>
@@ -21,7 +23,7 @@
                 <tr>
                     <td>{{ dedier.id }}</td>
                     <td>{{ dedier.name }}</td>
-                    <td>{# dedier.DedierIps[dedier.id].Ip #}</td>
+                    <td>{{ dedier.DedierIps[dedier.id][0].Ip }}</td>
                     <td>{{ dedier.port }}</td>
                     <td>{{ dedier.system }}</td>
                     <td>{{ dedier.path }}</td>
@@ -45,3 +47,4 @@
         </table>
     </div>
 </div>
+{% endblock %}

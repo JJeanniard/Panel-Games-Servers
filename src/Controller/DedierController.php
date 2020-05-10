@@ -10,6 +10,9 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+//TODO Affichage des information du serveur dedier connection, cpu, hdd.....
+//TODO Liste IP
+
 /**
  * @Route("/box")
  */
@@ -22,8 +25,9 @@ class DedierController extends AbstractController
      */
     public function index(DedierRepository $dedierRepository): Response
     {
-        //TODO penser à mettre un message d'alert dans la partie serveur games, si il pas de dedier ou association avec Nitrado .....
-        return $this->render('dedier/index.html.twig', [
+        //TODO Penser à mettre un message d'alert dans la partie serveur games, si il n'y a pas de dedier ou association avec Nitrado .....
+
+        return $this->render('dedier/box.html.twig', [
             'dediers' => $dedierRepository->findAll(),
         ]);
     }
@@ -88,7 +92,7 @@ class DedierController extends AbstractController
      */
     public function delete(Request $request, Dedier $dedier): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$dedier->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $dedier->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($dedier);
             $entityManager->flush();

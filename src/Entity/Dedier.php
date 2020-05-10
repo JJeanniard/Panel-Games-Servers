@@ -49,7 +49,7 @@ class Dedier
     private $port;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\DedierIP", mappedBy="dedier")
+     * @ORM\OneToMany(targetEntity="App\Entity\DedierIP", mappedBy="dedier", cascade={"persist"})
      */
     private $dedierIPs;
 

@@ -1,10 +1,11 @@
 {% extends 'base.html.twig' %}
-{% block title %}{{parent()}} - Box{% endblock %}
+{% block title %}{{ parent() }} - Box{% endblock %}
 {% block titre %}Box{% endblock %}
 {% block body %}
-<div class="col-md-7">
-    {% include "dedier/box.html.twig" %}
-</div>
+    <div class="col-md-12">
+        {% block body_box %}
+        {% endblock %}
+    </div>
 {% endblock %}
 
 {% block javascript %}
