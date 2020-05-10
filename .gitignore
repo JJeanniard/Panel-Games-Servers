@@ -67,11 +67,12 @@ yarn-error.log
 ###< symfony/webpack-encore-bundle ###
 
 ### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+.vscode
+#.vscode/*
+#!.vscode/settings.json
+#!.vscode/tasks.json
+#!.vscode/launch.json
+#!.vscode/extensions.json
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
@@ -167,5 +168,4 @@ fabric.properties
 .idea/**/markdown-navigator.xml
 .idea/**/markdown-navigator/
 
-.vscode
 .idea
