@@ -78,7 +78,11 @@ class Dedier
 
     public function getUsername()
     {
-        return stream_get_contents($this->username);
+        if($this->username != null){
+            return stream_get_contents($this->username);
+        }else{
+            return $this->username;
+        }
     }
 
     public function setUsername($username): self
