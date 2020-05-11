@@ -1,12 +1,13 @@
 {% extends 'dedier/index.html.twig' %}
 {% block body_box %}
-<div class="card">
-    <div class="card-header">
-        <a class="float-right btn btn-info" href="{{ path('dedier_new') }}"><i class="nav-icon fas fa-plus-circle"> Create new box </i></a>
-    </div>
-    <div class="card-body">
-        <table class="table">
-            <thead>
+    <div class="card">
+        <div class="card-header">
+            <a class="float-right btn btn-info" href="{{ path('dedier_new') }}"><i class="nav-icon fas fa-plus-circle">
+                    Create new box </i></a>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
@@ -17,34 +18,34 @@
                     <th>actions</th>
                     <th></th>
                 </tr>
-            </thead>
-            <tbody>
+                </thead>
+                <tbody>
                 {% for dedier in dediers %}
-                <tr>
-                    <td>{{ dedier.id }}</td>
-                    <td>{{ dedier.name }}</td>
-                    <td>{{ dedier.DedierIps[dedier.id][0].Ip }}</td>
-                    <td>{{ dedier.port }}</td>
-                    <td>{{ dedier.system }}</td>
-                    <td>{{ dedier.path }}</td>
-                    <td>
-                        <div class="btn-group">
-                            <a class="btn btn-info" href="{{ path('dedier_edit', {'id': dedier.id}) }}"><i
-                                    class="nav-icon fas fa-edit"></i></a>
-                            <a class="btn btn-secondary" href="{{ path('dedier_show', {'id': dedier.id}) }}"><i
-                                    class="nav-icon fas fa-search"></i></a>
-                        </div>
-                        
-                    </td>
-                    <td>{{ include('dedier/_delete_form.html.twig') }}</td>
-                </tr>
+                    <tr>
+                        <td>{{ dedier.id }}</td>
+                        <td>{{ dedier.name }}</td>
+                        <td>{{ dedier.DedierIps[0].Ip }}</td>
+                        <td>{{ dedier.port }}</td>
+                        <td>{{ dedier.system }}</td>
+                        <td>{{ dedier.path }}</td>
+                        <td>
+                            <div class="btn-group">
+                                <a class="btn btn-info" href="{{ path('dedier_edit', {'id': dedier.id}) }}"><i
+                                            class="nav-icon fas fa-edit"></i></a>
+                                <a class="btn btn-secondary" href="{{ path('dedier_show', {'id': dedier.id}) }}"><i
+                                            class="nav-icon fas fa-search"></i></a>
+                            </div>
+
+                        </td>
+                        <td>{{ include('dedier/_delete_form.html.twig') }}</td>
+                    </tr>
                 {% else %}
-                <tr>
-                    <td colspan="7">Pas de serveur dedier</td>
-                </tr>
+                    <tr>
+                        <td colspan="7">Pas de serveur dedier</td>
+                    </tr>
                 {% endfor %}
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
 {% endblock %}
