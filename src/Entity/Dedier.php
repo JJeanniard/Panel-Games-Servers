@@ -94,7 +94,11 @@ class Dedier
 
     public function getPassword()
     {
-        return $this->password;
+        if($this->password != null){
+            return stream_get_contents($this->password);
+        }else{
+            return $this->password;
+        }
     }
 
     public function setPassword($password): self

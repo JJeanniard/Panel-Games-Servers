@@ -14,8 +14,12 @@
                         <td>{{ dedier.name }}</td>
                     </tr>
                     <tr>
+                        <th>Status Connection</th>
+                        <td>{% if statusSsh %}<span class="badge bg-success"><i class="fas fa-signal"></i></span>{% else %}<span class="badge bg-warning"><i class="fas fa-signal"></i></span>{% endif %}</td>
+                    </tr>
+                    <tr>
                         <th>Username</th>
-                        <td>{{ dedier.username }}</td>
+                        <td>{{ dedier.username }}{{ dump(dedier.username) }}</td>
                     </tr>
                     <tr>
                         <th>System</th>

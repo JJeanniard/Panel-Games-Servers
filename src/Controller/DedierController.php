@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Dedier;
 use App\Form\DedierType;
 use App\Repository\DedierRepository;
+use phpseclib\Net\SSH2;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -23,7 +24,8 @@ class DedierController extends AbstractController
      */
     public function index(DedierRepository $dedierRepository): Response
     {
-        //TODO Penser à mettre un message d'alert dans la partie serveur games, si il n'y a pas de dedier ou association avec Nitrado .....
+        //TODO Penser à mettre un message d'alert dans la partie serveur games,
+        // si il n'y a pas de dedier, d'association avec Nitrado ou autre fournisseur de serveur avec API.....
 
         return $this->render('dedier/box.html.twig', [
             'dediers' => $dedierRepository->findAll(),
@@ -57,14 +59,25 @@ class DedierController extends AbstractController
 
     /**
      * @Route("/{id}", name="dedier_show", methods={"GET"})
+     * @param Dedier $dedier
+     * @return Response
      */
     public function show(Dedier $dedier): Response
     {
+        $statusSsh = TRUE;
+        //TODO verifier la connection et envoyer un message si erreur
         //TODO Verifier si une tâche est en place pour la remonter d'information
         //TODO Affichage des information du serveur dedier connection, cpu, hdd.....
-        //TODO Liste IP
+
+        $ssh = new SSH2($dedier->getDedierIPs()[0]->getIp());
+
+        if(!$ssh->login($dedier->getUsername(), $dedier->getPassword())){
+            $this->addFlash("warning", "Un probléme est survenue lors de la connection");
+            $statusSsh = FALSE;
+        }
 
         return $this->render('dedier/show.html.twig', [
+            'statusSsh' => $statusSsh,
             'dedier' => $dedier,
         ]);
     }
@@ -101,5 +114,12 @@ class DedierController extends AbstractController
         }
 
         return $this->redirectToRoute('dedier_index');
+    }
+
+    /**
+     * @Route("/{id}/api")
+     */
+    public function api(){
+
     }
 }
