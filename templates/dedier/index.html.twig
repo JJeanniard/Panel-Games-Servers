@@ -2,10 +2,8 @@
 {% block title %}{{ parent() }} - Box{% endblock %}
 {% block titre %}Box{% endblock %}
 {% block body %}
-    <div class="col-md-12">
-        {% block body_box %}
-        {% endblock %}
-    </div>
+    {% block body_box %}
+    {% endblock %}
 {% endblock %}
 
 {% block javascript %}

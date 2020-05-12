@@ -1,38 +1,53 @@
 {% extends 'dedier/index.html.twig' %}
 
-{% block title %}Dedier{% endblock %}
+{% block title %}{{ parent() }} - Show Dedier{% endblock %}
 
 {% block body_box %}
-    <h1>Dedier</h1>
-
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ dedier.id }}</td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <td>{{ dedier.name }}</td>
-            </tr>
-            <tr>
-                <th>Username</th>
-                <td>{{ dedier.username }}</td>
-            </tr>
-            <tr>
-                <th>Password</th>
-                <td>{{ dedier.password }}</td>
-            </tr>
-            <tr>
-                <th>System</th>
-                <td>{{ dedier.system }}</td>
-            </tr>
-            <tr>
-                <th>Path</th>
-                <td>{{ dedier.path }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('dedier_edit', {'id': dedier.id}) }}">edit</a>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">Show</div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <tbody>
+                    <tr>
+                        <th>Name</th>
+                        <td>{{ dedier.name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Username</th>
+                        <td>{{ dedier.username }}</td>
+                    </tr>
+                    <tr>
+                        <th>System</th>
+                        <td>{{ dedier.system }}</td>
+                    </tr>
+                    <tr>
+                        <th>Path</th>
+                        <td>{{ dedier.path }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">Ips</div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Order</th>
+                        <th>Ip</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for ip in dedier.dedierIPs %}
+                            <tr><td>{{ ip.id }}</td><td>{{ ip.ip }}</td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 {% endblock %}

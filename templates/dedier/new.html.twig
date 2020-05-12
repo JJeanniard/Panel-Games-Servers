@@ -2,12 +2,14 @@
 {% block title %}{{ parent() }} - New Dedier{% endblock %}
 {% block titre %}New Dedier{% endblock %}
 {% block body_box %}
+<div class="col-md-12">
     <div class="card card-primary">
         <div class="card-header">
             <h3 class="card-title">New Dedier</h3>
         </div>
         {{ include('dedier/_form.html.twig') }}
     </div>
+</div>
 {% endblock %}
 {% block javascript %}
 {{ parent() }}

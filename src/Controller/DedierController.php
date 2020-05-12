@@ -10,8 +10,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-//TODO Affichage des information du serveur dedier connection, cpu, hdd.....
-//TODO Liste IP
 
 /**
  * @Route("/box")
@@ -62,6 +60,10 @@ class DedierController extends AbstractController
      */
     public function show(Dedier $dedier): Response
     {
+        //TODO Verifier si une tâche est en place pour la remonter d'information
+        //TODO Affichage des information du serveur dedier connection, cpu, hdd.....
+        //TODO Liste IP
+
         return $this->render('dedier/show.html.twig', [
             'dedier' => $dedier,
         ]);
