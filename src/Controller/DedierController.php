@@ -79,6 +79,7 @@ class DedierController extends AbstractController
         return $this->render('dedier/show.html.twig', [
             'statusSsh' => $statusSsh,
             'dedier' => $dedier,
+            'username' => $dedier->getUsername(),
         ]);
     }
 
