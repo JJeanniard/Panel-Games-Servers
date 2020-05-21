@@ -46,16 +46,6 @@ class DedierIPController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="dedier_i_p_show", methods={"GET"})
-     */
-    public function show(DedierIP $dedierIP): Response
-    {
-        return $this->render('dedier_ip/show.html.twig', [
-            'dedier_i_p' => $dedierIP,
-        ]);
-    }
-
-    /**
      * @Route("/{id}/edit", name="dedier_i_p_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, DedierIP $dedierIP): Response

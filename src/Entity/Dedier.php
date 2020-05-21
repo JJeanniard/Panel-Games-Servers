@@ -5,7 +5,7 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use phpDocumentor\Reflection\Types\Integer;
+
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\DedierRepository")
@@ -25,7 +25,7 @@ class Dedier
     private $name;
 
     /**
-     * @ORM\Column(type="blob")
+     * @ORM\Column(type="string", length=255)
      */
     private $username;
 
@@ -54,9 +54,15 @@ class Dedier
      */
     private $dedierIPs;
 
+    /**
+     * @ORM\OneToMany(targetEntity=DedierData::class, mappedBy="dedier", orphanRemoval=true)
+     */
+    private $dedierData;
+
     public function __construct()
     {
         $this->dedierIPs = new ArrayCollection();
+        $this->dedierData = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -78,11 +84,7 @@ class Dedier
 
     public function getUsername()
     {
-        if($this->username != null){
-            return stream_get_contents($this->username);
-        }else{
-            return $this->username;
-        }
+        return $this->username;
     }
 
     public function setUsername($username): self
@@ -94,7 +96,11 @@ class Dedier
 
     public function getPassword()
     {
-        return $this->password;
+        if ($this->password != null) {
+            return stream_get_contents($this->password);
+        } else {
+            return $this->password;
+        }
     }
 
     public function setPassword($password): self
@@ -165,6 +171,37 @@ class Dedier
             // set the owning side to null (unless already changed)
             if ($dedierIP->getDedier() === $this) {
                 $dedierIP->setDedier(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|DedierData[]
+     */
+    public function getDedierData(): Collection
+    {
+        return $this->dedierData;
+    }
+
+    public function addDedierData(DedierData $dedierData): self
+    {
+        if (!$this->dedierData->contains($dedierData)) {
+            $this->dedierData[] = $dedierData;
+            $dedierData->setDedier($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDedierData(DedierData $dedierData): self
+    {
+        if ($this->dedierData->contains($dedierData)) {
+            $this->dedierData->removeElement($dedierData);
+            // set the owning side to null (unless already changed)
+            if ($dedierData->getDedier() === $this) {
+                $dedierData->setDedier(null);
             }
         }
 
