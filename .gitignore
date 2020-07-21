@@ -169,3 +169,7 @@ fabric.properties
 .idea/**/markdown-navigator/
 
 .idea
+
+# autre
+
+*.lck
