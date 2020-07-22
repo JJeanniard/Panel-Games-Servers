@@ -20,6 +20,7 @@
 # Logs (Symfony4)
 /var/log/*
 !var/log/.gitkeep
+*.lock
 
 # Parameters
 /app/config/parameters.yml
