@@ -1,0 +1,21 @@
+name: PRs auto merge
+
+on:
+  pull_request:
+    branches: [ master ]
+  schedule:
+  - cron: "0 6 * * *"
+  - cron: "0 12 * * *"
+  - cron: "0 17 * * *"
+  - cron: "0 20 * * *"
+
+jobs:
+  merge-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: everlytic/branch-merge@1.0.2
+        with:
+          github_token: ${{ github.token }}
+          source_ref: ${{ github.ref }}
+          target_branch: 'master'
