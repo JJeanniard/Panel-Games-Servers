@@ -193,3 +193,4 @@ fabric.properties
 *.lo1
 ~$*
 ~W*
+*/*.vpp.bak_*
