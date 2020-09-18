@@ -2,7 +2,7 @@
 
 namespace App\Repository;
 
-use App\Entity\UserPseudo;
+use App\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
@@ -10,16 +10,16 @@ use Symfony\Component\Security\Core\User\PasswordUpgraderInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
- * @method UserPseudo|null find($id, $lockMode = null, $lockVersion = null)
- * @method UserPseudo|null findOneBy(array $criteria, array $orderBy = null)
- * @method UserPseudo[]    findAll()
- * @method UserPseudo[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method User|null find($id, $lockMode = null, $lockVersion = null)
+ * @method User|null findOneBy(array $criteria, array $orderBy = null)
+ * @method User[]    findAll()
+ * @method User[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class UserPseudoRepository extends ServiceEntityRepository implements PasswordUpgraderInterface
+class UserRepository extends ServiceEntityRepository implements PasswordUpgraderInterface
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, UserPseudo::class);
+        parent::__construct($registry, User::class);
     }
 
     /**
@@ -27,7 +27,7 @@ class UserPseudoRepository extends ServiceEntityRepository implements PasswordUp
      */
     public function upgradePassword(UserInterface $user, string $newEncodedPassword): void
     {
-        if (!$user instanceof UserPseudo) {
+        if (!$user instanceof User) {
             throw new UnsupportedUserException(sprintf('Instances of "%s" are not supported.', \get_class($user)));
         }
 
@@ -37,7 +37,7 @@ class UserPseudoRepository extends ServiceEntityRepository implements PasswordUp
     }
 
     // /**
-    //  * @return UserPseudo[] Returns an array of UserPseudo objects
+    //  * @return User[] Returns an array of User objects
     //  */
     /*
     public function findByExampleField($value)
@@ -54,7 +54,7 @@ class UserPseudoRepository extends ServiceEntityRepository implements PasswordUp
     */
 
     /*
-    public function findOneBySomeField($value): ?UserPseudo
+    public function findOneBySomeField($value): ?User
     {
         return $this->createQueryBuilder('u')
             ->andWhere('u.exampleField = :val')
