@@ -42,6 +42,9 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
+            ->add('userpseudo')
+            ->add('userfirstname')
+            ->add('userlastname')
         ;
     }
 
