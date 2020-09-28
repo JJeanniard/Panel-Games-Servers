@@ -16,10 +16,9 @@ class EmailVerifier
     private $mailer;
     private $entityManager;
 
-    public function __construct(VerifyEmailHelperInterface $helper, MailerInterface $mailer, EntityManagerInterface $manager)
+    public function __construct(VerifyEmailHelperInterface $helper, EntityManagerInterface $manager)
     {
         $this->verifyEmailHelper = $helper;
-        $this->mailer = $mailer;
         $this->entityManager = $manager;
     }
 

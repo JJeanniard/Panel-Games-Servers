@@ -43,7 +43,7 @@ class User implements UserInterface
     private $user_lastname;
 
     /**
-     * @ORM\Column(type="string", length=50)
+     * @ORM\Column(type="string", length=50, nullable=true)
      */
     private $user_firstname;
 
@@ -81,7 +81,7 @@ class User implements UserInterface
      */
     public function getUsername(): string
     {
-        return (string) $this->email;
+        return (string) $this->user_pseudo;
     }
 
     /**
