@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block body %}
+    <h1>User</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>User_pseudo</th>
+                <td>{{ user.userPseudo }}</td>
+            </tr>
+            <tr>
+                <th>Roles</th>
+                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+            </tr>
+            {% if app.user == user %}
+            <tr>
+                <th>User_email</th>
+                <td>{{ user.userEmail }}</td>
+            </tr>
+            <tr>
+                <th>User_lastname</th>
+                <td>{{ user.userLastname }}</td>
+            </tr>
+            <tr>
+                <th>User_firstname</th>
+                <td>{{ user.userFirstname }}</td>
+            </tr>
+            {% endif %}
+            {% if app.user == user or is_granted('ROLE_ADMINSTRATOR') or is_granted('ROLE_LEADER')%}
+            <tr>
+                <th>IsVerified</th>
+                <td>{{ user.isVerified ? 'Yes' : 'No' }}</td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('user_index') }}">back to list</a>
+    {% if app.user == user %}
+    <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+    {{ include('user/_delete_form.html.twig') }}
+    {% elseif is_granted('ROLE_ADMINSTRATOR') or is_granted('ROLE_LEADER') %}
+    <a href="{{ path('admin_user_edit', {'id': user.id}) }}">edit</a>
+    {% endif  %}
+
+{% endblock %}
