@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 3 | {% block title %}Log in!{% endblock %}</title>
+    <title>Panel Games Server | {% block title %}Log in!{% endblock %}</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -68,11 +68,6 @@
                             </label>
                         </div>
                     </div>
-
-                    {#
-                    Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-                    See https://symfony.com/doc/current/security/remember_me.html
-                    #}
                     <!-- /.col -->
                     <div class="col-4">
                         <button type="submit" class="btn btn-primary btn-block">Sign In</button>
@@ -80,6 +75,8 @@
                     <!-- /.col -->
                 </div>
             </form>
+            {#
+            Suppretion de social conect pour le moment
             <div class="social-auth-links text-center mb-3">
                 <p>- OR -</p>
                 <a href="#" class="btn btn-block btn-primary">
@@ -90,12 +87,12 @@
                 </a>
             </div>
             <!-- /.social-auth-links -->
-
+            #}
             <p class="mb-1">
-                <a href="forgot-password.html">I forgot my password</a>
+                <a href="#">I forgot my password</a>
             </p>
             <p class="mb-0">
-                <a href="register.html" class="text-center">Register a new membership</a>
+                <a href="{{ path('app_register') }}" class="text-center">Register a new membership</a>
             </p>
         </div>
         <!-- /.login-card-body -->
