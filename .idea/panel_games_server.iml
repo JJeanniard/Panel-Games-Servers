@@ -77,6 +77,7 @@
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/http-kernel" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/intl" />
+      <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/mailer" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/maker-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/mime" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/monolog-bridge" />
