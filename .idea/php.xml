@@ -112,6 +112,7 @@
       <path value="$PROJECT_DIR$/src/vendor/symfony/swiftmailer-bundle" />
       <path value="$PROJECT_DIR$/src/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/src/vendor/symfonycasts/reset-password-bundle" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
