@@ -30,7 +30,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82abfa12-7ecc-45d8-a636-413b6e4eb066" name="Default Changelist" comment="" />
+    <list default="true" id="82abfa12-7ecc-45d8-a636-413b6e4eb066" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/base.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +64,6 @@
       <path value="$PROJECT_DIR$/src/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/finder" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/src/vendor/symfony/apache-pack" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/twig-bridge" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/property-info" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/mime" />
@@ -73,10 +77,8 @@
       <path value="$PROJECT_DIR$/src/vendor/symfony/security-bundle" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/error-handler" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/web-link" />
-      <path value="$PROJECT_DIR$/src/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/dom-crawler" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/serializer" />
-      <path value="$PROJECT_DIR$/src/vendor/symfony/inflector" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/maker-bundle" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/form" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/intl" />
@@ -86,41 +88,32 @@
       <path value="$PROJECT_DIR$/src/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/flex" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/var-dumper" />
-      <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-php72" />
-      <path value="$PROJECT_DIR$/src/vendor/friendsofsymfony/ckeditor-bundle" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/dependency-injection" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/http-client-contracts" />
       <path value="$PROJECT_DIR$/src/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/web-profiler-bundle" />
       <path value="$PROJECT_DIR$/src/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/dotenv" />
-      <path value="$PROJECT_DIR$/src/vendor/almasaeed2010/adminlte" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/config" />
       <path value="$PROJECT_DIR$/src/vendor/phpdocumentor/type-resolver" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/expression-language" />
       <path value="$PROJECT_DIR$/src/vendor/webimpress/safe-writer" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/src/vendor/symfonycasts/verify-email-bundle" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/http-kernel" />
       <path value="$PROJECT_DIR$/src/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-php73" />
-      <path value="$PROJECT_DIR$/src/vendor/jjeanniard/infoserver" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/src/vendor/ocramius/proxy-manager" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/var-exporter" />
-      <path value="$PROJECT_DIR$/src/vendor/phpseclib/phpseclib" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/monolog-bundle" />
       <path value="$PROJECT_DIR$/src/vendor/doctrine/persistence" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/browser-kit" />
-      <path value="$PROJECT_DIR$/src/vendor/doctrine/doctrine-fixtures-bundle" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/translation-contracts" />
       <path value="$PROJECT_DIR$/src/vendor/doctrine/orm" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/console" />
       <path value="$PROJECT_DIR$/src/vendor/doctrine/dbal" />
-      <path value="$PROJECT_DIR$/src/vendor/symfony/security" />
       <path value="$PROJECT_DIR$/src/vendor/doctrine/migrations" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/validator" />
-      <path value="$PROJECT_DIR$/src/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/cache" />
       <path value="$PROJECT_DIR$/src/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/debug-bundle" />
@@ -133,9 +126,7 @@
       <path value="$PROJECT_DIR$/src/vendor/doctrine/lexer" />
       <path value="$PROJECT_DIR$/src/vendor/laminas/laminas-zendframework-bridge" />
       <path value="$PROJECT_DIR$/src/vendor/doctrine/reflection" />
-      <path value="$PROJECT_DIR$/src/vendor/knplabs/knp-paginator-bundle" />
       <path value="$PROJECT_DIR$/src/vendor/doctrine/event-manager" />
-      <path value="$PROJECT_DIR$/src/vendor/knplabs/knp-components" />
       <path value="$PROJECT_DIR$/src/vendor/doctrine/doctrine-bundle" />
       <path value="$PROJECT_DIR$/src/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/src/vendor/doctrine/doctrine-migrations-bundle" />
@@ -160,10 +151,18 @@
       <path value="$PROJECT_DIR$/src/vendor/symfony/cache-contracts" />
       <path value="$PROJECT_DIR$/src/vendor/composer" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/mailer" />
-      <path value="$PROJECT_DIR$/src/vendor/symfonycasts/reset-password-bundle" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/notifier" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/src/vendor/psr/event-dispatcher" />
     </include_path>
   </component>
   <component name="ProjectId" id="1i5EATJiDn8VP9QClLq6YPpVF6l" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -178,13 +177,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\jonat\Documents\GitHub\TeamGames\panel_games_server\src\src" />
+      <recent name="D:\jonat\Documents\GitHub\TeamGames\panel_games_server\src\src\Controller" />
+      <recent name="D:\jonat\Documents\GitHub\TeamGames\panel_games_server\src\public" />
+      <recent name="D:\jonat\Documents\GitHub\TeamGames\panel_games_server\src\templates\adminlte" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\jonat\Documents\GitHub\TeamGames\panel_games_server\src\templates" />
       <recent name="D:\jonat\Documents\GitHub\TeamGames\panel_games_server\src" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\jonat\Documents\GitHub\TeamGames\panel_games_server\src\public" />
-      <recent name="D:\jonat\Documents\GitHub\TeamGames\panel_games_server\src\templates\adminlte" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -214,7 +215,10 @@
       <workItem from="1606289315973" duration="146000" />
       <workItem from="1606368659122" duration="4659000" />
       <workItem from="1606377798865" duration="49000" />
-      <workItem from="1606481810002" duration="10971000" />
+      <workItem from="1606481810002" duration="11307000" />
+      <workItem from="1606560720589" duration="115000" />
+      <workItem from="1606560838794" duration="282000" />
+      <workItem from="1606561131461" duration="2358000" />
     </task>
     <servers />
   </component>
@@ -242,10 +246,11 @@
       <screen x="0" y="0" width="1536" height="920" />
     </state>
     <state x="338" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.920/-1920.122.1536.824/1920.-386.960.1496@0.0.1536.920" timestamp="1606557061245" />
-    <state x="549" y="154" key="FileChooserDialogImpl" timestamp="1605505777101">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1606560835660">
+      <screen x="0" y="0" width="1536" height="920" />
     </state>
     <state x="549" y="154" key="FileChooserDialogImpl/-1920.0.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1605505777101" />
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.920/-1920.122.1536.824/1920.-386.960.1496@0.0.1536.920" timestamp="1606560835660" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1601444270840">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
