@@ -4,8 +4,13 @@
 */src/.preload.php
 */var/
 */vendor/
+*/migrations/
+*/composer.lock
+*/symfony.lock
 ###< symfony/framework-bundle ###
+
 */.env.dev.local
+*/.env.local
 
 ###> symfony/phpunit-bridge ###
 *.phpunit

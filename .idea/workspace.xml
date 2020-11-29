@@ -31,15 +31,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82abfa12-7ecc-45d8-a636-413b6e4eb066" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/panel_games_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/panel_games_server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/migrations/Version20201129120103.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/migrations/Version20201129123502.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/src/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/src/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Form/RegistrationFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/registration/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +166,20 @@
       <path value="$PROJECT_DIR$/src/vendor/symfony/security-csrf" />
       <path value="$PROJECT_DIR$/src/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/src/vendor/symfonycasts/verify-email-bundle" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/apache-pack" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/inflector" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/src/vendor/friendsofsymfony/ckeditor-bundle" />
+      <path value="$PROJECT_DIR$/src/vendor/almasaeed2010/adminlte" />
+      <path value="$PROJECT_DIR$/src/vendor/jjeanniard/infoserver" />
+      <path value="$PROJECT_DIR$/src/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/src/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/security" />
+      <path value="$PROJECT_DIR$/src/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/src/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/src/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/src/vendor/symfonycasts/reset-password-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1i5EATJiDn8VP9QClLq6YPpVF6l" />
@@ -183,15 +198,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\jonat\Documents\GitHub\TeamGames\panel_games_server\src\templates" />
+      <recent name="D:\jonat\Documents\GitHub\TeamGames\panel_games_server\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\jonat\Documents\GitHub\TeamGames\panel_games_server\src\src" />
       <recent name="D:\jonat\Documents\GitHub\TeamGames\panel_games_server\src\src\Controller" />
       <recent name="D:\jonat\Documents\GitHub\TeamGames\panel_games_server\src\public" />
       <recent name="D:\jonat\Documents\GitHub\TeamGames\panel_games_server\src\templates\adminlte" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\jonat\Documents\GitHub\TeamGames\panel_games_server\src\templates" />
-      <recent name="D:\jonat\Documents\GitHub\TeamGames\panel_games_server\src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
