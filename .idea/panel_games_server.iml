@@ -6,6 +6,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src/src" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/tests" isTestSource="true" packagePrefix="App\Tests\" />
+      <excludeFolder url="file://$MODULE_DIR$/src/public/adminlte" />
+      <excludeFolder url="file://$MODULE_DIR$/src/var" />
+      <excludeFolder url="file://$MODULE_DIR$/src/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfonycasts/verify-email-bundle" />
     </content>
     <orderEntry type="inheritedJdk" />
