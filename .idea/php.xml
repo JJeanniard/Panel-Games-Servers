@@ -104,7 +104,8 @@
       <path value="$PROJECT_DIR$/src/vendor/symfony/security-core" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/security-csrf" />
       <path value="$PROJECT_DIR$/src/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/src/vendor/symfonycasts/verify-email-bundle" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />
 </project>
