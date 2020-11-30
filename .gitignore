@@ -5,8 +5,7 @@
 */var/
 */vendor/
 */migrations/
-*/composer.lock
-*/symfony.lock
+*/*.lock
 ###< symfony/framework-bundle ###
 
 */.env.dev.local
