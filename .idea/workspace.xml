@@ -31,8 +31,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82abfa12-7ecc-45d8-a636-413b6e4eb066" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/symfony.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Security/LoginFormAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,6 +175,8 @@
       <path value="$PROJECT_DIR$/src/vendor/knplabs/knp-paginator-bundle" />
       <path value="$PROJECT_DIR$/src/vendor/knplabs/knp-components" />
       <path value="$PROJECT_DIR$/src/vendor/symfonycasts/reset-password-bundle" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/src/vendor/swiftmailer/swiftmailer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1i5EATJiDn8VP9QClLq6YPpVF6l" />

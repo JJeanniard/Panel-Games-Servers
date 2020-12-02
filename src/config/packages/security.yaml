@@ -1,4 +1,5 @@
 security:
+    enable_authenticator_manager: true
     encoders:
         App\Entity\User:
             algorithm: bcrypt
@@ -15,7 +16,6 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
-            anonymous: true
             lazy: true
             provider: app_user_provider
             guard:
@@ -40,5 +40,11 @@ security:
     # Note: Only the *first* access control that matches will be used
     # TODO: Ticket login: - template, - access_control (bloquer tout les acces sauf login, register, reset, email), - reset-password
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/verify/email, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/reset-password, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/_profiler, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/_wdt, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/_error, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/, roles: IS_AUTHENTICATED_FULLY  }
