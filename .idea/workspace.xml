@@ -31,11 +31,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82abfa12-7ecc-45d8-a636-413b6e4eb066" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/packages/reset_password.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/packages/reset_password.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/symfony.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
