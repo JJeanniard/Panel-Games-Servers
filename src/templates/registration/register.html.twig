@@ -1,4 +1,6 @@
+{# TODO: empêcher un utilisateur connecté de pouvoir s'inscrire #}
 {% extends "layout.html.twig" %}
+{% block title %}{{ parent() }} | Register{% endblock %}
 {% block stylesheets %}
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('adminlte/plugins/fontawesome-free/css/all.min.css') }}">

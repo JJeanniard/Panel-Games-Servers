@@ -12,7 +12,8 @@
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="info">
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                <a href="{{ path('user_index') }}" class="d-block">{{ app.user }}</a>
+                    {# TODO: route pour modifier l'utilisateur #}
+                <a href="" class="d-block">{{ app.user.username }}</a>
                 <a href="{{ path('app_logout') }}">Logout</a>
                 {% endif %}
             </div>
