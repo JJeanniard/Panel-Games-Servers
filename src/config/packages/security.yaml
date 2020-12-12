@@ -40,11 +40,11 @@ security:
     # Note: Only the *first* access control that matches will be used
     # TODO: Ticket login: - template, - access_control (bloquer tout les acces sauf login, register, reset, email), - reset-password
     access_control:
-         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-         - { path: ^/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-         - { path: ^/verify/email, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-         - { path: ^/reset-password, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-         - { path: ^/_profiler, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-         - { path: ^/_wdt, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-         - { path: ^/_error, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/login, roles: PUBLIC_ACCESS }
+         - { path: ^/register, roles: PUBLIC_ACCESS }
+         - { path: ^/verify/email, roles: PUBLIC_ACCESS }
+         - { path: ^/reset-password, roles: PUBLIC_ACCESS }
+         - { path: ^/_profiler, roles: PUBLIC_ACCESS }
+         - { path: ^/_wdt, roles: PUBLIC_ACCESS }
+         - { path: ^/_error, roles: PUBLIC_ACCESS }
          - { path: ^/, roles: IS_AUTHENTICATED_FULLY  }
