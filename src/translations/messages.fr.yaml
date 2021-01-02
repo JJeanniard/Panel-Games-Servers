@@ -3,6 +3,8 @@ user:
     unique: Il y a déja un compte avec cette email
     not_blank: La valeur pour l'email est vide
     invalide: Le format de l'email est invalide
+    verifier:
+      success: Votre adresse email a bien été verifié
 
   pwd:
     not_blank: La valeur pour le password est vide
@@ -13,3 +15,7 @@ user:
 
   steamid:
     unique: Il y a déja un compte avec ce steam Id
+
+  redirect:
+    registration:
+      already_connecter: Vous êtes déja connecté, il n'est pas possible de s'enregistrer.

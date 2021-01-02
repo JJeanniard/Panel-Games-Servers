@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="2f5etWZ" resname="user.email.unique">
+        <source>user.email.unique</source>
+        <target>Il y a déja un compte avec cette email</target>
+      </trans-unit>
+      <trans-unit id="Wd7jwrn" resname="user.email.not_blank">
+        <source>user.email.not_blank</source>
+        <target>La valeur pour l'email est vide</target>
+      </trans-unit>
+      <trans-unit id="7DS0LqW" resname="user.email.invalide">
+        <source>user.email.invalide</source>
+        <target>Le format de l'email est invalide</target>
+      </trans-unit>
+      <trans-unit id="DyXadRd" resname="user.email.verifier.success">
+        <source>user.email.verifier.success</source>
+        <target>Votre adresse email a bien été verifié</target>
+      </trans-unit>
+      <trans-unit id="dFBLHs3" resname="user.pwd.not_blank">
+        <source>user.pwd.not_blank</source>
+        <target>La valeur pour le password est vide</target>
+      </trans-unit>
+      <trans-unit id="_VYgaKr" resname="user.pseudo.unique">
+        <source>user.pseudo.unique</source>
+        <target>Il y a déja un compte avec ce pseudo</target>
+      </trans-unit>
+      <trans-unit id="6UJgJPk" resname="user.pseudo.not_blank">
+        <source>user.pseudo.not_blank</source>
+        <target>La valeur pour le pseudo est vide</target>
+      </trans-unit>
+      <trans-unit id="h.I5V0m" resname="user.steamid.unique">
+        <source>user.steamid.unique</source>
+        <target>Il y a déja un compte avec ce steam Id</target>
+      </trans-unit>
+      <trans-unit id="P00j4kA" resname="user.redirect.registration.already_connecter">
+        <source>user.redirect.registration.already_connecter</source>
+        <target>Vous êtes déja connecté, il n'est pas possible de s'enregistrer.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

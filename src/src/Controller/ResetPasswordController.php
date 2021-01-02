@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Form\ChangePasswordFormType;
 use App\Form\ResetPasswordRequestFormType;
+use phpDocumentor\Reflection\Types\Object_;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -17,6 +18,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use SymfonyCasts\Bundle\ResetPassword\Controller\ResetPasswordControllerTrait;
 use SymfonyCasts\Bundle\ResetPassword\Exception\ResetPasswordExceptionInterface;
 use SymfonyCasts\Bundle\ResetPassword\ResetPasswordHelperInterface;
+use Symfony\Component\Security\Core\Security;
 
 /**
  * @Route("/reset-password")
@@ -36,10 +38,16 @@ class ResetPasswordController extends AbstractController
      * Display & process form to request a password reset.
      *
      * @Route("", name="app_forgot_password_request")
-     * TODO : empêcher l'utilisateur connecté de pouvoir allé sur la page reset password
+     * @param Request $request
+     * @param MailerInterface $mailer
+     * @return Response
      */
     public function request(Request $request, MailerInterface $mailer): Response
     {
+        if (is_object($this->getUser())) {
+            return $this->redirectToRoute('home');
+        }
+
         $form = $this->createForm(ResetPasswordRequestFormType::class);
         $form->handleRequest($request);
 
@@ -72,8 +80,8 @@ class ResetPasswordController extends AbstractController
         ]);*/
 
         $message = 'An email has been sent that contains a link that you can 
-        click to reset your password. This link will expire in '. date('g',$this->resetPasswordHelper->getTokenLifetime()).' hour(s).
-        If you don\'t receive an email please check your spam folder or <a href="'.$this->generateUrl('app_forgot_password_request').'">try again</a>.';
+        click to reset your password. This link will expire in ' . date('g', $this->resetPasswordHelper->getTokenLifetime()) . ' hour(s).
+        If you don\'t receive an email please check your spam folder or <a href="' . $this->generateUrl('app_forgot_password_request') . '">try again</a>.';
 
         $this->addFlash('info', $message);
         return $this->redirectToRoute('app_login');
@@ -83,6 +91,10 @@ class ResetPasswordController extends AbstractController
      * Validates and process the reset URL that the user clicked in their email.
      *
      * @Route("/reset/{token}", name="app_reset_password")
+     * @param Request $request
+     * @param UserPasswordEncoderInterface $passwordEncoder
+     * @param string|null $token
+     * @return Response
      */
     public function reset(Request $request, UserPasswordEncoderInterface $passwordEncoder, string $token = null): Response
     {
@@ -175,8 +187,7 @@ class ResetPasswordController extends AbstractController
             ->context([
                 'resetToken' => $resetToken,
                 'tokenLifetime' => $this->resetPasswordHelper->getTokenLifetime(),
-            ])
-        ;
+            ]);
 
         $mailer->send($email);
 

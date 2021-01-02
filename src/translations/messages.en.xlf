@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="2f5etWZ" resname="user.email.unique">
+        <source>user.email.unique</source>
+        <target>There is already an account with this email</target>
+      </trans-unit>
+      <trans-unit id="Wd7jwrn" resname="user.email.not_blank">
+        <source>user.email.not_blank</source>
+        <target>The value for email is blank</target>
+      </trans-unit>
+      <trans-unit id="7DS0LqW" resname="user.email.invalide">
+        <source>user.email.invalide</source>
+        <target>Email is invalide</target>
+      </trans-unit>
+      <trans-unit id="DyXadRd" resname="user.email.verifier.success">
+        <source>user.email.verifier.success</source>
+        <target>Your email address has been verified.</target>
+      </trans-unit>
+      <trans-unit id="dFBLHs3" resname="user.pwd.not_blank">
+        <source>user.pwd.not_blank</source>
+        <target>The value for password is blank</target>
+      </trans-unit>
+      <trans-unit id="_VYgaKr" resname="user.pseudo.unique">
+        <source>user.pseudo.unique</source>
+        <target>There is already an account with this pseudo</target>
+      </trans-unit>
+      <trans-unit id="6UJgJPk" resname="user.pseudo.not_blank">
+        <source>user.pseudo.not_blank</source>
+        <target>The value for pseudo is blank</target>
+      </trans-unit>
+      <trans-unit id="h.I5V0m" resname="user.steamid.unique">
+        <source>user.steamid.unique</source>
+        <target>There is already an account with this steam id</target>
+      </trans-unit>
+      <trans-unit id="P00j4kA" resname="user.redirect.registration.already_connecter">
+        <source>user.redirect.registration.already_connecter</source>
+        <target>You have connected, is not possible of register</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

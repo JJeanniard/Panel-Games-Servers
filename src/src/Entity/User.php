@@ -38,7 +38,7 @@ class User implements UserInterface
     /**
      * @var string The hashed password
      * @Assert\NotBlank(message="user.pwd.not_blank")
-     * @ORM\Column(type="string", length=60)
+     * @ORM\Column(type="string")
      */
     private $password;
 

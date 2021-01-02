@@ -10,7 +10,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.html" class="nav-link">Home</a>
+                    <a href="{{ path('home') }}" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Contact</a>
@@ -68,7 +68,8 @@
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
                                         Nora Silvester
-                                        <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                                        <span class="float-right text-sm text-warning"><i
+                                                    class="fas fa-star"></i></span>
                                     </h3>
                                     <p class="text-sm">The subject goes here</p>
                                     <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
@@ -117,8 +118,22 @@
         <!-- /.navbar -->
         {% include('menu.html.twig') %}
         <div class="content-wrapper">
-            {% block content %}
-            {% endblock %}
+            <div class="content-header">
+                <div class="content-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-dark">{% block titlePage %}{% endblock %}</h1>
+                        </div>
+                        <div class="col-sm-6"></div>
+                    </div>
+                </div>
+            </div>
+            <section class="content">
+                {% include('alert.html.twig') %}
+
+                {% block content %}
+                {% endblock %}
+            </section>
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
