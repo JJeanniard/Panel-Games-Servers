@@ -10,9 +10,9 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
- * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
- * @UniqueEntity(fields={"pseudo"}, message="There is already an account with this pseudo")
- * @UniqueEntity(fields={"steamId"}, message="There is already an account with this steam id")
+ * @UniqueEntity(fields={"email"}, message="user.email.unique")
+ * @UniqueEntity(fields={"pseudo"}, message="user.pseudo.unique")
+ * @UniqueEntity(fields={"steamId"}, message="user.steamid.unique")
  */
 class User implements UserInterface
 {
@@ -53,7 +53,6 @@ class User implements UserInterface
     private $lastname;
 
     /**
-     *
      * @ORM\Column(type="string", length=30, nullable=true, unique=true)
      */
     private $steamId;

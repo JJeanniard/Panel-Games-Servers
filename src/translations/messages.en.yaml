@@ -1,0 +1,15 @@
+user:
+  email:
+    unique: There is already an account with this email
+    not_blank: The value for email is blank
+    invalide: Email is invalide
+
+  pwd:
+    not_blank: The value for password is blank
+
+  pseudo:
+    unique: There is already an account with this pseudo
+    not_blank: The value for pseudo is blank
+
+  steamid:
+    unique: There is already an account with this steam id

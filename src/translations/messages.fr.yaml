@@ -1,0 +1,15 @@
+user:
+  email:
+    unique: Il y a déja un compte avec cette email
+    not_blank: La valeur pour l'email est vide
+    invalide: Le format de l'email est invalide
+
+  pwd:
+    not_blank: La valeur pour le password est vide
+
+  pseudo:
+    unique: Il y a déja un compte avec ce pseudo
+    not_blank: La valeur pour le pseudo est vide
+
+  steamid:
+    unique: Il y a déja un compte avec ce steam Id
