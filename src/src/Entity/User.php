@@ -7,12 +7,12 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Security\Core\User\UserInterface;
-//TODO constraints assert
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
  * @UniqueEntity(fields={"pseudo"}, message="There is already an account with this pseudo")
+ * @UniqueEntity(fields={"steamId"}, message="There is already an account with this steam id")
  */
 class User implements UserInterface
 {
@@ -24,7 +24,8 @@ class User implements UserInterface
     private $id;
 
     /**
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="user.email.not_blank")
+     * @Assert\Email(message="user.email.invalide")
      * @ORM\Column(type="string", length=180, unique=true)
      */
     private $email;
@@ -36,7 +37,8 @@ class User implements UserInterface
 
     /**
      * @var string The hashed password
-     * @ORM\Column(type="string")
+     * @Assert\NotBlank(message="user.pwd.not_blank")
+     * @ORM\Column(type="string", length=60)
      */
     private $password;
 
@@ -51,7 +53,8 @@ class User implements UserInterface
     private $lastname;
 
     /**
-     * @ORM\Column(type="string", length=30, nullable=true)
+     *
+     * @ORM\Column(type="string", length=30, nullable=true, unique=true)
      */
     private $steamId;
 
@@ -61,7 +64,8 @@ class User implements UserInterface
     private $isVerified = false;
 
     /**
-     * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank(message="user.pseudo.not_blank")
+     * @ORM\Column(type="string", length=50, unique=true)
      */
     private $pseudo;
 

@@ -31,11 +31,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82abfa12-7ecc-45d8-a636-413b6e4eb066" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/templates/modals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/reset_password/check_email.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/reset_password/check_email.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/reset_password/request.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/reset_password/request.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/reset_password/reset.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/reset_password/reset.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/Controller/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Controller/ResetPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/alert.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/alert.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/modals.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/modals.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +180,7 @@
       <path value="$PROJECT_DIR$/src/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/security-csrf" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/translation" />
     </include_path>
   </component>
   <component name="ProjectId" id="1i5EATJiDn8VP9QClLq6YPpVF6l" />
@@ -190,7 +194,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CRM/DWWM2005_Agence" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -241,7 +245,11 @@
       <workItem from="1607405835403" duration="4031000" />
       <workItem from="1607699261088" duration="1532000" />
       <workItem from="1607701403298" duration="6012000" />
-      <workItem from="1607760268278" duration="5572000" />
+      <workItem from="1607760268278" duration="13234000" />
+      <workItem from="1607926150284" duration="82000" />
+      <workItem from="1607935529862" duration="35000" />
+      <workItem from="1607940191714" duration="635000" />
+      <workItem from="1609520687995" duration="2384000" />
     </task>
     <servers />
   </component>

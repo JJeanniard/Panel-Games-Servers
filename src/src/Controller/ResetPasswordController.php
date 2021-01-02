@@ -67,9 +67,16 @@ class ResetPasswordController extends AbstractController
             return $this->redirectToRoute('app_forgot_password_request');
         }
 
-        return $this->render('reset_password/check_email.html.twig', [
+        /* $this->render('reset_password/check_email.html.twig', [
             'tokenLifetime' => $this->resetPasswordHelper->getTokenLifetime(),
-        ]);
+        ]);*/
+
+        $message = 'An email has been sent that contains a link that you can 
+        click to reset your password. This link will expire in '. date('g',$this->resetPasswordHelper->getTokenLifetime()).' hour(s).
+        If you don\'t receive an email please check your spam folder or <a href="'.$this->generateUrl('app_forgot_password_request').'">try again</a>.';
+
+        $this->addFlash('info', $message);
+        return $this->redirectToRoute('app_login');
     }
 
     /**
