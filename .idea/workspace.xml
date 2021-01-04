@@ -32,17 +32,6 @@
   <component name="ChangeListManager">
     <list default="true" id="82abfa12-7ecc-45d8-a636-413b6e4eb066" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/packages/translation.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Controller/RegistrationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Controller/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Controller/ResetPasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/alert.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/alert.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/registration/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/translations/messages.en.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/messages.en.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/translations/messages.fr.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/messages.fr.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +187,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CRM/DWWM2005_Agence" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Perso/JJeanniard.github.io" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -253,7 +242,7 @@
       <workItem from="1607926150284" duration="82000" />
       <workItem from="1607935529862" duration="35000" />
       <workItem from="1607940191714" duration="635000" />
-      <workItem from="1609520687995" duration="13437000" />
+      <workItem from="1609520687995" duration="16131000" />
     </task>
     <servers />
   </component>
