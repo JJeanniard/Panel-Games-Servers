@@ -78,11 +78,21 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    {{ form_widget(registrationForm.plainPassword, {
-                        label: 'Password',
+                    {{ form_widget(registrationForm.plainPassword.first, {
                         'attr': {
-                            'class': 'form-control',
-                            'placeholder': 'Password'
+                            'class': 'form-control'
+                        }
+                    }) }}
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    {{ form_widget(registrationForm.plainPassword.second, {
+                        'attr': {
+                            'class': 'form-control'
                         }
                     }) }}
                     <div class="input-group-append">

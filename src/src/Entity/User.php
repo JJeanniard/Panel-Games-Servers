@@ -35,10 +35,11 @@ class User implements UserInterface
      */
     private $roles = [];
 
+    //@Assert\NotBlank(message="user.pwd.not_blank"), ne fonctionne pas sur le champs mdp
     /**
      * @var string The hashed password
-     * @Assert\NotBlank(message="user.pwd.not_blank")
-     * @ORM\Column(type="string")
+     *
+     * @ORM\Column(type="string", length=60)
      */
     private $password;
 

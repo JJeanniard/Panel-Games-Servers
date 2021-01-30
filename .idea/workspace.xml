@@ -32,9 +32,12 @@
   <component name="ChangeListManager">
     <list default="true" id="82abfa12-7ecc-45d8-a636-413b6e4eb066" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Panel-Games-Server.Loo" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Panel-Games-Server.Loo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Panel-Games-Server.lo1" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Panel-Games-Server.lo1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.env" beforeDir="false" afterPath="$PROJECT_DIR$/src/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/migrations/Version20201128172805.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Controller/RegistrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Form/RegistrationFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/registration/register.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +58,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
     <include_path>
@@ -252,7 +263,7 @@
       <workItem from="1611060245902" duration="27000" />
       <workItem from="1611241277612" duration="1750000" />
       <workItem from="1611303359162" duration="1293000" />
-      <workItem from="1611991453412" duration="377000" />
+      <workItem from="1611991453412" duration="6895000" />
     </task>
     <servers />
   </component>
