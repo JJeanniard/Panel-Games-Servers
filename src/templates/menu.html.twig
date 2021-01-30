@@ -13,7 +13,7 @@
             <div class="info">
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                     {# TODO: route pour modifier l'utilisateur #}
-                <a href="" class="d-block">{{ app.user.username }}</a>
+                <a href="" class="d-block">{{ app.user.pseudo | capitalize }}</a>
                 <a href="{{ path('app_logout') }}">Logout</a>
                 {% endif %}
             </div>
