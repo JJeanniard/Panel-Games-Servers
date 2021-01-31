@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dedier index{% endblock %}
+
+{% block body %}
+    <h1>Dedier index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>SshLogin</th>
+                <th>SshPassword</th>
+                <th>SshKey</th>
+                <th>Description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for dedier in dediers %}
+            <tr>
+                <td>{{ dedier.name }}</td>
+                <td>{{ dedier.sshLogin }}</td>
+                <td>{{ dedier.sshPassword }}</td>
+                <td>{{ dedier.sshKey }}</td>
+                <td>{{ dedier.description }}</td>
+                <td>
+                    <a href="{{ path('dedier_show', {'name': dedier.name}) }}">show</a>
+                    <a href="{{ path('dedier_edit', {'name': dedier.name}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('dedier_new') }}">Create new</a>
+{% endblock %}

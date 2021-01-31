@@ -17,5 +17,6 @@ class UserFixtures extends Fixture
 {
     public function load(ObjectManager $manager){
         //persister un nombre d'utilisateur dans la db
+        $manager->flush();
     }
 }

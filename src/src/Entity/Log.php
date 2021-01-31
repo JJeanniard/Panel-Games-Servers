@@ -22,17 +22,17 @@ class Log
      *   @ORM\JoinColumn(name="id", referencedColumnName="id")
      * })
      */
-    private $id;
+    private int $id;
 
     /**
      * @var \Dediers
      *
-     * @ORM\ManyToOne(targetEntity="Dediers")
+     * @ORM\ManyToOne(targetEntity="Dedier")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="name", referencedColumnName="name")
      * })
      */
-    private $name;
+    private string $name;
 
     public function getId(): ?Data
     {

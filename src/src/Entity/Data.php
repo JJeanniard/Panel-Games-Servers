@@ -19,14 +19,14 @@ class Data
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $id;
+    private int $id;
 
     /**
      * @var string|null
      *
      * @ORM\Column(name="data", type="text", length=0, nullable=true)
      */
-    private $data;
+    private string $data;
 
     public function getId(): ?int
     {

@@ -19,35 +19,35 @@ class Dedier
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $name;
+    private string $name;
 
     /**
      * @var string
      *
      * @ORM\Column(name="ssh_login", type="string", length=50, nullable=false)
      */
-    private $sshLogin;
+    private string $sshLogin;
 
     /**
      * @var string|null
      *
      * @ORM\Column(name="ssh_password", type="string", length=50, nullable=true)
      */
-    private $sshPassword;
+    private string $sshPassword;
 
     /**
      * @var string|null
      *
      * @ORM\Column(name="ssh_key", type="string", length=50, nullable=true)
      */
-    private $sshKey;
+    private string $sshKey;
 
     /**
      * @var string|null
      *
      * @ORM\Column(name="description", type="text", length=65535, nullable=true)
      */
-    private $description;
+    private string $description;
 
     public function getName(): ?string
     {

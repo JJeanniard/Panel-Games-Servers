@@ -19,24 +19,24 @@ class Ip
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $ip;
+    private string $ip;
 
     /**
      * @var string|null
      *
      * @ORM\Column(name="description", type="text", length=65535, nullable=true)
      */
-    private $description;
+    private string $description;
 
     /**
      * @var \Dedier
      *
-     * @ORM\ManyToOne(targetEntity="Dediers")
+     * @ORM\ManyToOne(targetEntity="Dedier")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="name", referencedColumnName="name")
      * })
      */
-    private $name;
+    private string $name;
 
     public function getIp(): ?string
     {

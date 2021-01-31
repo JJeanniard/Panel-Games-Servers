@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ip index{% endblock %}
+
+{% block body %}
+    <h1>Ip index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Ip</th>
+                <th>Description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ip in ips %}
+            <tr>
+                <td>{{ ip.ip }}</td>
+                <td>{{ ip.description }}</td>
+                <td>
+                    <a href="{{ path('ip_show', {'ip': ip.ip}) }}">show</a>
+                    <a href="{{ path('ip_edit', {'ip': ip.ip}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('ip_new') }}">Create new</a>
+{% endblock %}
