@@ -8,8 +8,7 @@
  * @version 0.0.1
  */
 
-
-namespace App\Tests;
+namespace App\Tests\Repository;
 
 
 class UserRepositoryTest
