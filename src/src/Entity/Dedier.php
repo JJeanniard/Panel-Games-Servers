@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -48,6 +50,21 @@ class Dedier
      * @ORM\Column(name="description", type="text", length=65535, nullable=true)
      */
     private string $description;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private int $sshPort;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Ip::class, mappedBy="name", orphanRemoval=true)
+     */
+    private Ip $Ips;
+
+    public function __construct()
+    {
+        $this->Ips = new ArrayCollection();
+    }
 
     public function getName(): ?string
     {
@@ -98,6 +115,48 @@ class Dedier
     public function setDescription(?string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getSshPort(): ?int
+    {
+        return $this->sshPort;
+    }
+
+    public function setSshPort(int $sshPort): self
+    {
+        $this->sshPort = $sshPort;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Ip[]
+     */
+    public function getIps(): Collection
+    {
+        return $this->Ips;
+    }
+
+    public function addIp(Ip $ip): self
+    {
+        if (!$this->Ips->contains($ip)) {
+            $this->Ips[] = $ip;
+            $ip->setDedier($this);
+        }
+
+        return $this;
+    }
+
+    public function removeIp(Ip $ip): self
+    {
+        if ($this->Ips->removeElement($ip)) {
+            // set the owning side to null (unless already changed)
+            if ($ip->getDedier() === $this) {
+                $ip->setDedier(null);
+            }
+        }
 
         return $this;
     }

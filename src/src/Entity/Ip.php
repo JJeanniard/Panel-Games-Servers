@@ -31,7 +31,7 @@ class Ip
     /**
      * @var \Dedier
      *
-     * @ORM\ManyToOne(targetEntity="Dedier")
+     * @ORM\ManyToOne(targetEntity="Dedier", inversedBy="Ips")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="name", referencedColumnName="name")
      * })
@@ -66,6 +66,5 @@ class Ip
 
         return $this;
     }
-
 
 }

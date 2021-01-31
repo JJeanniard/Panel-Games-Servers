@@ -16,6 +16,7 @@ class DedierType extends AbstractType
             ->add('sshPassword')
             ->add('sshKey')
             ->add('description')
+            ->add('sshPort')
         ;
     }
 

@@ -13,6 +13,7 @@
                 <th>SshPassword</th>
                 <th>SshKey</th>
                 <th>Description</th>
+                <th>SshPort</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -24,6 +25,7 @@
                 <td>{{ dedier.sshPassword }}</td>
                 <td>{{ dedier.sshKey }}</td>
                 <td>{{ dedier.description }}</td>
+                <td>{{ dedier.sshPort }}</td>
                 <td>
                     <a href="{{ path('dedier_show', {'name': dedier.name}) }}">show</a>
                     <a href="{{ path('dedier_edit', {'name': dedier.name}) }}">edit</a>
@@ -31,7 +33,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="6">no records found</td>
+                <td colspan="7">no records found</td>
             </tr>
         {% endfor %}
         </tbody>
